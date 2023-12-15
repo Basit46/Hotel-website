@@ -15,7 +15,7 @@ const Home = () => {
       <Facilities />
       <Best />
       <Gallery />
-      <Footer />
+      <Footer whiteBg />
     </div>
   );
 };

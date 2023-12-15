@@ -98,7 +98,7 @@ const Facility = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer whiteBg={false} />
     </div>
   );
 };

@@ -113,7 +113,7 @@ const Room = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer whiteBg />
     </div>
   );
 };

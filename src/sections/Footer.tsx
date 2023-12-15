@@ -4,11 +4,25 @@ import curve from "../assets/Curve.png";
 import arrow1 from "../assets/footerarrow1.svg";
 import arrow2 from "../assets/footerarrow2.svg";
 
-const Footer = () => {
+type FooterPropType = {
+  whiteBg: boolean;
+};
+
+const Footer = ({ whiteBg }: FooterPropType) => {
   return (
-    <footer className="relative w-full h-fit bg-white text-green px-[60px] pt-[200px]">
-      <p className="text-left text-[40px]  leading-[50px]">+38 032 297 50 20</p>
-      <p className="mt-[80px] ml-auto mr-[200px] w-60 text-lg uppercase">
+    <footer
+      className={`${
+        whiteBg ? "bg-white text-green" : "bg-green text-white"
+      } relative w-full h-fit px-[60px] pt-[200px]`}
+    >
+      <p className={`${!whiteBg && "text-right"} text-[40px]  leading-[50px]`}>
+        +38 032 297 50 20
+      </p>
+      <p
+        className={`${
+          whiteBg && "ml-auto mr-[200px]"
+        } mt-[80px] w-60 text-lg uppercase`}
+      >
         8 Lystopadovoho Chynu,Lviv
       </p>
 
