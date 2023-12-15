@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Miracle";
+  src: local("Miracle"), url(./fonts/Miracle.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTStd";
+  src: local("HelveticaNeueLTStd"),
+    url(./fonts/HelveticaNeueLTStd.otf) format("opentype");
+}
+
+body {
+  background-color: #313f38;
+  color: #fffcf6;
+  font-family: "HelveticaNeueLTStd", sans-serif;
+}
+
+@layer components {
+  nav ul li a {
+    @apply text-sm leading-tight;
+  }
+
+  .hero .button {
+    @apply w-[300px] py-[30px] flex justify-center;
+  }
+
+  .facilities-section .facility {
+    @apply mt-[50px] pb-[40px] flex justify-between items-center border-b border-b-[#313F38] border-opacity-[0.24];
+  }
+  .facilities-section .facility > h1 {
+    @apply ml-[100px] flex-1 flex gap-[70px] text-[40px] font-Miracle capitalize leading-[50px] tracking-wider;
+  }
+
+  .galllery-section h1 {
+    @apply flex gap-[20px];
+  }
+  .galllery-section h1 span {
+    @apply font-Miracle text-[100px] hover:text-white duration-200;
+    color: rgba(255, 252, 246, 0.12);
+  }
+}
+
+.hero .blurbg {
+  background: rgba(49, 63, 56, 0.48);
+  backdrop-filter: blur(20px);
+}
+
+.rooms-section .btnBg {
+  fill: #fcd043;
+}
