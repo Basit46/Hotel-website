@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   return (
-    <nav className="w-full px-[60px] py-[30px] flex justify-between items-center">
+    <nav className="sticky top-0 z-[20] bg-green w-full px-[60px] py-[30px] flex justify-between items-center">
       <Link to="/" className="text-xl font-medium">
         BankHotel
       </Link>
@@ -23,12 +23,7 @@ const Navbar = () => {
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink
-            to="restaurant"
-            duration={1000}
-            smooth={true}
-            offset={200}
-          >
+          <ScrollLink to="restaurant" duration={1000} smooth={true}>
             RESTAURANT
           </ScrollLink>
         </li>

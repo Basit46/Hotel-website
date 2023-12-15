@@ -43,7 +43,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
         TOUCH
       </h1>
 
-      <img className="absolute top-[23%] left-0" src={curve} alt="curve" />
+      <img className="absolute top-[13%] left-0" src={curve} alt="curve" />
 
       <div className="pb-[150px]">
         <h1 className="text-[26px] uppercase">Find a room</h1>
@@ -92,7 +92,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
             Sign up to our newsletter not to miss exclusive offers and
             information about the upcoming events.
           </p>
-          <div className="w-fit h-fit flex border border-[#313F38] border-opacity-[0.24] px-[20px] py-[15px]">
+          <div className="w-fit h-fit flex gap-[5px] border border-[#313F38] border-opacity-[0.24] px-[20px] py-[15px]">
             <input
               type="text"
               className="border-none outline-none"

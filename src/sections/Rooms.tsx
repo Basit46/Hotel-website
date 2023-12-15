@@ -2,6 +2,7 @@ import { useState } from "react";
 import roomBtn from "../assets/roomBtn.svg";
 import starImg from "../assets/star.svg";
 import { rooms } from "../data/roomsList";
+import { Link } from "react-router-dom";
 
 const Rooms = () => {
   const [currentRoom, setCurrentRoom] = useState(0);
@@ -67,15 +68,16 @@ const Rooms = () => {
           <div className="mt-[90px]">
             <h1 className="relative text-4xl font-Miracle capitalize tracking-wide">
               {rooms.map((room, index) => (
-                <span
+                <Link
+                  to={`room/${room.id}`}
                   className={`${
                     currentRoom == index
-                      ? "opacity-100 duration-500"
-                      : "opacity-0"
+                      ? "opacity-100 duration-500 "
+                      : "opacity-0 translate-y-[100%]"
                   } absolute top-0 left-0`}
                 >
                   {room.name}
-                </span>
+                </Link>
               ))}
             </h1>
             <div className="mt-[40px] h-[40px] w-[30px]"></div>

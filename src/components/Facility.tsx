@@ -2,6 +2,7 @@ import { useState } from "react";
 import arrow from "../assets/fArrow.svg";
 import roomBtn from "../assets/roomBtn.svg";
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 type FacilityPropType = {
   facility: {
@@ -14,7 +15,9 @@ type FacilityPropType = {
 };
 
 const Facility = ({ facility, index }: FacilityPropType) => {
+  //Local states
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       id={facility.id}
@@ -37,12 +40,14 @@ const Facility = ({ facility, index }: FacilityPropType) => {
           <span>0{index + 1}</span>
           <span>{facility.name}</span>
         </ScrollLink>
-        <img
-          onClick={() => setIsOpen(true)}
-          className="cursor-pointer"
-          src={arrow}
-          alt="arrow"
-        />
+        <Link to={`facility/${facility.id}`}>
+          <img
+            onClick={() => setIsOpen(true)}
+            className="cursor-pointer"
+            src={arrow}
+            alt="arrow"
+          />
+        </Link>
       </div>
 
       <div

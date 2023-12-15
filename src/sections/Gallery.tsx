@@ -52,13 +52,30 @@ const Gallery = () => {
       </div>
 
       <div className="mt-[100px]">
-        <h1>
-          <span>Bank hotel</span>
-          <span>Bank__hotel©</span>
-        </h1>
-        <h1>
-          <span>Bank hotel</span> <span>Bank hotel</span>
-        </h1>
+        <div className="slide w-full overflow-x-hidden">
+          <div className="w-fit flex gap-[40px]">
+            <h1 className="ml-[40px]">Bank hotel</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank__hotel©</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank__hotel©</h1>
+            <h1>Bank hotel</h1>
+          </div>
+        </div>
+        <div className="slide2 w-full overflow-x-hidden">
+          <div className="w-fit flex gap-[40px] translate-x-[-50%]">
+            <h1 className="ml-[40px]">Bank hotel</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank__hotel©</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank hotel</h1>
+            <h1>Bank__hotel©</h1>
+            <h1>Bank hotel</h1>
+          </div>
+        </div>
       </div>
     </section>
   );

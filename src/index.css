@@ -33,10 +33,7 @@ body {
   }
 
   .galllery-section h1 {
-    @apply flex gap-[20px];
-  }
-  .galllery-section h1 span {
-    @apply font-Miracle text-[100px] hover:text-white duration-200;
+    @apply font-Miracle text-[100px] hover:text-white duration-200 whitespace-nowrap;
     color: rgba(255, 252, 246, 0.12);
   }
 }
@@ -48,4 +45,29 @@ body {
 
 .rooms-section .btnBg {
   fill: #fcd043;
+}
+
+/* slide1 */
+.galllery-section .slide > div {
+  animation: slide-left 8s infinite linear;
+}
+.galllery-section .slide > div:hover {
+  animation-play-state: paused;
+}
+@keyframes slide-left {
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* slide2 */
+.galllery-section .slide2 > div {
+  animation: slide-right 8s infinite linear;
+}
+.galllery-section .slide2 > div:hover {
+  animation-play-state: paused;
+}
+@keyframes slide-right {
+  to {
+    transform: translateX(0%);
+  }
 }

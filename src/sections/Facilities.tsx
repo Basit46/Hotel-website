@@ -3,6 +3,7 @@ import img1 from "../assets/facilityImg1.png";
 import img2 from "../assets/facilityImg2.png";
 import Facility from "../components/Facility";
 import { facilities } from "../data/facilitiesList";
+
 const Facilities = () => {
   return (
     <section className="facilities-section pb-[200px] py-[80px] px-[60px] bg-[#FFFCF6] text-[#1B3B36]">

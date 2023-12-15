@@ -5,24 +5,28 @@ import img4 from "../assets/f4.png";
 
 export const rooms = [
   {
+    id: 1,
     img1: room11,
     img2: room12,
     name: "Superior twin",
     desc: "The Superior twin is perfect for those who plan to stay long. The spacious and bright room is equipped with deluxe Italian furniture and has a beautiful view to the historical part of the city. Stylish interior design and comfortable beds will make your stay cozy and pleasant.",
   },
   {
+    id: 2,
     img1: room12,
     img2: room11,
     name: "Room2",
     desc: "2 The Superior twin is perfect for those who plan to stay long. The spacious and bright room is equipped with deluxe Italian furniture and has a beautiful view to the historical part of the city. Stylish interior design and comfortable beds will make your stay cozy and pleasant.",
   },
   {
+    id: 3,
     img1: img3,
     img2: img3,
     name: "Room 3",
     desc: "3 The Superior twin is perfect for those who plan to stay long. The spacious and bright room is equipped with deluxe Italian furniture and has a beautiful view to the historical part of the city. Stylish interior design and comfortable beds will make your stay cozy and pleasant.",
   },
   {
+    id: 4,
     img1: img4,
     img2: img4,
     name: "Room 4",

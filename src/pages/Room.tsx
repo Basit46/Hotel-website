@@ -5,16 +5,27 @@ import starImg from "../assets/star.svg";
 import curve from "../assets/curve2.svg";
 import Footer from "../sections/Footer";
 import stamp from "../assets/stamp2.svg";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { rooms } from "../data/roomsList";
+import { RoomType } from "../data/types";
 
 const Room = () => {
+  const params = useParams();
+
+  //Local state
+  const [roomDetails, setRoomDetails] = useState<RoomType | undefined>();
+
+  useEffect(() => {
+    setRoomDetails(rooms.find((room) => room.id.toString() == params.roomId));
+  }, [params.roomId]);
+
   return (
     <div>
       <section className="w-full h-[100vh] relative px-[60px] bg-room-page-bg bg-cover ">
         <div className="w-full h-full py-[70px] flex flex-col justify-between">
           <h1 className="text-yellow text-[125px] font-Miracle leading-[150px]">
-            Superior
-            <br />
-            twin
+            {roomDetails?.name}
           </h1>
           <p className="text-yellow text-lg uppercase">
             All room decoration was made
@@ -53,11 +64,7 @@ const Room = () => {
             feel special.
           </p>
           <div className="w-[335px] opacity-80 text-stone-50 text-lg leading-7">
-            The Superior twin would perfectly match the needs of those who plan
-            to stay long. The bright and airy room is equipped with superior
-            soft Italian furniture. Large windows open a beautiful view to the
-            historical part of the city. Contemporary interior design and
-            comfortable beds will make your stay cozy and delightful.
+            {roomDetails?.desc}
           </div>
         </div>
 
@@ -98,12 +105,7 @@ const Room = () => {
           <div>
             <img src={img4} alt="room" />
             <div className="mt-[40px] w-[350px] opacity-80 text-lg leading-7">
-              The Superior twin includes two functional zones: a living room
-              with the best Italian furniture, and an isolated cozy bedroom with
-              a large bed. Here, you will find space both for work and
-              comfortable rest. Hotel offers supreme comfort and outstanding
-              24-hour room service to make sure that the time you spend here is
-              enjoyable and pleasant.
+              {roomDetails?.desc}
             </div>
           </div>
         </div>

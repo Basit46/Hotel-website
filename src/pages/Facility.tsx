@@ -1,11 +1,27 @@
+import { useEffect, useState } from "react";
 import stamp from "../assets/stamp3.png";
 import img1 from "../assets/f1.png";
 import img2 from "../assets/f2.png";
 import img3 from "../assets/f3.png";
 import img4 from "../assets/f4.png";
 import Footer from "../sections/Footer";
+import { facilityType } from "../data/types";
+import { facilities } from "../data/facilitiesList";
+import { useParams } from "react-router-dom";
 
 const Facility = () => {
+  const params = useParams();
+
+  //Local states
+  const [facilityDetails, setFacilityDetails] = useState<
+    facilityType | undefined
+  >();
+
+  useEffect(() => {
+    setFacilityDetails(
+      facilities.find((facility) => facility.id == params.facilityId)
+    );
+  }, []);
   return (
     <div className="w-full overflow-hidden">
       <section className="relative w-full h-fit">
@@ -22,7 +38,7 @@ const Facility = () => {
 
         <div className="absolute top-0 left-0 h-full w-full py-[49px] px-[60px]">
           <h1 className="text-yellow text-[125px] font-Miracle leading-[105px]">
-            “Safe” restaurant
+            {facilityDetails?.name}
           </h1>
           <div className="mt-[300px] flex justify-between">
             <h1 className="text-[50px] font-Miracle capitalize">
@@ -35,11 +51,7 @@ const Facility = () => {
                 alt="stamp"
               />
               <p className="w-[350px] opacity-80 text-lg leading-7">
-                Bank Hotel proudly welcomes you to the Safe Restaurant, a place
-                where you will wish you could dine every day. The restaurant
-                offers a unique menu developed by the team of professionals led
-                by chef Mary-Ann Jones, the wine list with more than 250 items,
-                the outstanding service, and the unforgettable atmosphere.
+                {facilityDetails?.desc}
               </p>
             </div>
           </div>

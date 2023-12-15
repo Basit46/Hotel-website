@@ -12,7 +12,7 @@ export const facilities = [
   {
     img: facility2,
     name: "Conference Hall",
-    id: "conferenceHall",
+    id: "conference-hall",
     desc: "The hotel’s exclusive infrastructure is complemented by the unique atmosphere of the Safe Restaurant. Author’s menu, extensive wine card, and live music will set you for the correct mood.",
   },
   {
