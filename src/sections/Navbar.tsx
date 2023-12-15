@@ -1,28 +1,46 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   return (
     <nav className="w-full px-[60px] py-[30px] flex justify-between items-center">
-      <h1 className="text-xl font-medium">BankHotel</h1>
+      <Link to="/" className="text-xl font-medium">
+        BankHotel
+      </Link>
 
       <ul className="flex gap-[40px] items-center">
         <li>
           <NavLink to="/">HOME</NavLink>
         </li>
         <li>
-          <a href="#">ABOUT</a>
+          <ScrollLink to="about" duration={500} smooth={true}>
+            ABOUT
+          </ScrollLink>
         </li>
         <li>
-          <NavLink to="/room">ROOMS</NavLink>
+          <ScrollLink to="rooms" duration={500} smooth={true} offset={200}>
+            ROOMS
+          </ScrollLink>
         </li>
         <li>
-          <a href="#">RESTAURANT</a>
+          <ScrollLink
+            to="restaurant"
+            duration={1000}
+            smooth={true}
+            offset={200}
+          >
+            RESTAURANT
+          </ScrollLink>
         </li>
         <li>
-          <a href="#">CONFERENCE HALL</a>
+          <ScrollLink to="conference-hall" duration={1000} smooth={true}>
+            CONFERENCE HALL
+          </ScrollLink>
         </li>
         <li>
-          <a href="#">CONTACT</a>
+          <ScrollLink to="contact" duration={1000} smooth={true}>
+            CONTACT
+          </ScrollLink>
         </li>
       </ul>
 

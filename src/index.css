@@ -21,7 +21,7 @@ body {
 
 @layer components {
   nav ul li a {
-    @apply text-sm leading-tight;
+    @apply text-sm leading-tight cursor-pointer;
   }
 
   .hero .button {
@@ -29,10 +29,7 @@ body {
   }
 
   .facilities-section .facility {
-    @apply mt-[50px] pb-[40px] flex justify-between items-center border-b border-b-[#313F38] border-opacity-[0.24];
-  }
-  .facilities-section .facility > h1 {
-    @apply ml-[100px] flex-1 flex gap-[70px] text-[40px] font-Miracle capitalize leading-[50px] tracking-wider;
+    @apply flex justify-between items-center;
   }
 
   .galllery-section h1 {

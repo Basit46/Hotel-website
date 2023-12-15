@@ -65,7 +65,10 @@ const Footer = ({ whiteBg }: FooterPropType) => {
         </div>
       </div>
 
-      <div className="py-[100px] border-t border-t-[#313F38] border-opacity-[0.24] flex justify-between">
+      <div
+        id="contact"
+        className="py-[100px] border-t border-t-[#313F38] border-opacity-[0.24] flex justify-between"
+      >
         <div>
           <h1 className="text-[26px] uppercase">
             <span className="text-amber-300 text-[26px] uppercase">/</span>

@@ -5,14 +5,16 @@ import btn from "../assets/aboutBtn.svg";
 
 const About = () => {
   return (
-    <section className="w-full relative my-[70px]  h-[100vh] min-h-[100vh] ">
+    <section id="about" className="w-full relative mt-[70px] overflow-hidden">
       {/* Background designs */}
-      <div className="relative w-full h-full">
-        <div className="absolute top-0 right-0 w-[58%] border-t border-[#3F5148]"></div>
-        <div className="absolute top-0 right-0 w-[25%] h-full border-l border-[#3F5148]"></div>
-        <div className="absolute top-0 right-[25%] w-[66vw] h-[66vw] rounded-full border border-[#3F5148]">
-          <div className="relative w-full h-full">
-            <div className="absolute bottom-0 right-0 w-full h-[50%] bg-green"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="relative w-full h-full">
+          <div className="absolute top-0 right-0 w-[58%] border-t border-[#3F5148]"></div>
+          <div className="absolute top-0 right-0 w-[25%] h-full border-l border-[#3F5148]"></div>
+          <div className="absolute top-0 right-[25%] w-[66vw] h-[66vw] rounded-full border border-[#3F5148]">
+            <div className="relative w-full h-full">
+              <div className="absolute top-[50%] right-0 w-full h-[50%] bg-green"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -23,7 +25,7 @@ const About = () => {
         </h1>
       </div>
 
-      <div className="absolute left-0 top-0 w-full h-full mt-[100px] px-[60px] flex justify-between">
+      <div className="relative w-full h-full mt-[100px] px-[60px] flex justify-between">
         <img src={img1} alt="High quality room" />
 
         <div className="w-[30%] self-end">
