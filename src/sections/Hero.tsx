@@ -2,8 +2,10 @@ import starImg from "../assets/star.svg";
 import heroBtn from "../assets/heroBtn.svg";
 import heroImg from "../assets/heroImage.png";
 import arrowDown from "../assets/arrow.svg";
+import { useGlobalContext } from "../context/globalContext";
 
 const Hero = () => {
+  const { setOpenBookingModal } = useGlobalContext();
   return (
     <section className="hero w-full mt-[40px] px-[60px]">
       <div className="w-full flex justify-between">
@@ -45,7 +47,10 @@ const Hero = () => {
               <p className="text-base font-medium leading-tight">CHECK OUT</p>
               <img src={arrowDown} alt="arrow" />
             </div>
-            <div className="button bg-yellow">
+            <div
+              onClick={() => setOpenBookingModal(true)}
+              className="button bg-yellow cursor-pointer"
+            >
               <p className="text-black text-lg font-medium uppercase leading-tight">
                 book room
               </p>

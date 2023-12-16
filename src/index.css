@@ -36,6 +36,17 @@ body {
     @apply font-Miracle text-[100px] hover:text-white duration-200 whitespace-nowrap;
     color: rgba(255, 252, 246, 0.12);
   }
+
+  form input {
+    @apply w-full border-green/30 border px-[10px] py-[5px] rounded-[20px] bg-green/10;
+  }
+  form input::placeholder {
+    @apply font-Miracle text-green tracking-wide;
+  }
+
+  .player svg {
+    @apply cursor-pointer text-[20px];
+  }
 }
 
 .hero .blurbg {
