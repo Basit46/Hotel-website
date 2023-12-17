@@ -19,24 +19,30 @@ const About = () => {
         </div>
       </div>
 
-      <div className="absolute z-[1] top-[150px] left-[35%]">
-        <h1 className="text-right text-[125px] font-Miracle leading-[105px] text-yellow">
+      <div className="absolute z-[1] top-[120px] xl:top-[150px] left-[20%] xl:left-[35%]">
+        <h1 className="text-right text-[100px] xl:text-[125px] font-Miracle leading-[105px] text-yellow">
           ABOUT <br /> <span className="text-[#fffcf6]">US</span>
         </h1>
       </div>
 
-      <div className="relative w-full h-full mt-[100px] px-[60px] flex justify-between">
-        <img src={img1} alt="High quality room" />
+      <div className="relative w-full h-full mt-[100px] px-[20px] xl:px-[60px] flex justify-between">
+        <div className="w-[35%] xl:w-[481px] h-full">
+          <img
+            className="h-full w-full object-cover"
+            src={img1}
+            alt="High quality room"
+          />
+        </div>
 
-        <div className="w-[30%] self-end">
-          <h1 className="text-4xl font-Miracle capitalize tracking-wide">
+        <div className="w-[28%] xl:w-[30%] self-end">
+          <h1 className="mt-[10px] text-[28px] xl:text-4xl font-Miracle capitalize tracking-wide">
             High quality
           </h1>
-          <p className="opacity-60  leading-7">
+          <p className="mt-[20px] text-[13px] xl:text-base opacity-60 leading-7">
             The five-star Bank Hotel was reopened to visitors in 2016. The
             building was renovated and modernized to meet the expectations of
             the most demanding guests. We offer luxurious rooms, numerous
-            facilities, and exceptional service.{" "}
+            facilities, and exceptional service.
           </p>
         </div>
 
@@ -46,8 +52,16 @@ const About = () => {
             src={label}
             alt="Stamp"
           />
-          <img src={img2} alt="High quality room" />
-          <img className="w-fit h-fit" src={btn} alt="About Section Button" />
+          <img
+            className="w-[165px] xl:w-fit"
+            src={img2}
+            alt="High quality room"
+          />
+          <img
+            className="hidden xl:block w-fit h-fit"
+            src={btn}
+            alt="About Section Button"
+          />
         </div>
       </div>
     </section>

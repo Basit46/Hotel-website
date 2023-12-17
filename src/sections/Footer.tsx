@@ -13,14 +13,18 @@ const Footer = ({ whiteBg }: FooterPropType) => {
     <footer
       className={`${
         whiteBg ? "bg-white text-green" : "bg-green text-white"
-      } relative w-full h-fit px-[60px] pt-[200px]`}
+      } relative w-full h-fit px-[20px] xl:px-[60px] pt-[200px]`}
     >
-      <p className={`${!whiteBg && "text-right"} text-[40px]  leading-[50px]`}>
+      <p
+        className={`${
+          !whiteBg && "text-right"
+        } text-[38px] xl:text-[40px]  leading-[50px]`}
+      >
         +38 032 297 50 20
       </p>
       <p
         className={`${
-          whiteBg && "ml-auto mr-[200px]"
+          whiteBg && "ml-auto mr-[110px] xl:mr-[200px]"
         } mt-[80px] w-60 text-lg uppercase`}
       >
         8 Lystopadovoho Chynu,Lviv
@@ -28,18 +32,18 @@ const Footer = ({ whiteBg }: FooterPropType) => {
 
       <div className="mt-[150px] flex gap-[70px]">
         <div className="h-fit flex  gap-[40px]">
-          <h1 className="relative z-[1] h-fit text-[200px] font-Miracle uppercase leading-[200px]">
+          <h1 className="relative whitespace-nowrap z-[1] h-fit text-[150px] xl:text-[200px] font-Miracle uppercase leading-[200px]">
             Get in
           </h1>
           <img
-            className="w-[100px] h-[100px] self-center"
+            className="w-[70px] xl:w-[100px] h-fit xl:h-[100px] self-center"
             src={star}
             alt="star"
           />
         </div>
-        <img src={hotelImg} alt="hotel room" />
+        <img className="w-[233px] xl:w-fit" src={hotelImg} alt="hotel room" />
       </div>
-      <h1 className="h-fit mt-[-60px] text-end text-[200px] text-yellow font-Miracle uppercase leading-[200px]">
+      <h1 className="h-fit mt-[-100px] xl:mt-[-60px] text-end text-[150px] xl:text-[200px] text-yellow font-Miracle uppercase leading-[200px]">
         TOUCH
       </h1>
 
@@ -71,7 +75,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
       >
         <div>
           <h1 className="text-[26px] uppercase">
-            <span className="text-amber-300 text-[26px] uppercase">/</span>
+            <span className="text-yellow text-[26px] uppercase">/</span>
             About us
           </h1>
           <p className="mt-[40px] mb-[70px] w-[285px] opacity-80 text-base leading-7">
@@ -107,7 +111,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
             <span className="text-amber-300 text-[26px] uppercase">/</span>
             social
           </h1>
-          <p className="mt-[40px] flex gap-[30px]">
+          <p className="mt-[40px] flex flex-col xl:flex-row gap-[30px]">
             <a
               href="#"
               target="blank"

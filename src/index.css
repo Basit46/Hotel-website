@@ -25,7 +25,7 @@ body {
   }
 
   .hero .button {
-    @apply w-[300px] py-[30px] flex justify-center;
+    @apply w-[250px] h-fit xl:w-[300px] py-[30px] flex justify-center;
   }
 
   .facilities-section .facility {

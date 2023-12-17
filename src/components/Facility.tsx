@@ -25,7 +25,7 @@ const Facility = ({ facility, index }: FacilityPropType) => {
     >
       <div className={`facility ${isOpen ? "h-0" : "h-fit"} overflow-hidden`}>
         <img
-          className="w-[217px] h-[217px]"
+          className="w-[189px] xl:w-[217px] xl:h-[217px]"
           src={facility.img}
           alt="Hotel Facility"
         />
@@ -43,7 +43,7 @@ const Facility = ({ facility, index }: FacilityPropType) => {
         <Link to={`facility/${facility.id}`}>
           <img
             onClick={() => setIsOpen(true)}
-            className="cursor-pointer"
+            className="w-[44px] xl:w-fit cursor-pointer"
             src={arrow}
             alt="arrow"
           />
@@ -58,13 +58,13 @@ const Facility = ({ facility, index }: FacilityPropType) => {
         <div className="pt-[30px] flex flex-col justify-end">
           <img
             onClick={() => setIsOpen(false)}
-            className="w-fit h-fit rotate-[90deg] mb-[120px] cursor-pointer"
+            className="w-[105px] xl:w-fit h-fit rotate-[90deg] mb-[120px] cursor-pointer"
             src={roomBtn}
             alt="Room Button"
           />
         </div>
 
-        <div className="pt-[60px] w-[30%] flex flex-col justify-between">
+        <div className="pt-[60px] w-[28%] xl:w-[30%] flex flex-col justify-between">
           <p className="text-[50px] font-normal font-Miracle uppercase">
             0{index + 1}
           </p>
@@ -72,7 +72,9 @@ const Facility = ({ facility, index }: FacilityPropType) => {
             <h1 className="mb-[30px] text-4xl font-Miracle capitalize tracking-wide">
               {facility.name}
             </h1>
-            <p className="opacity-80  text-lg leading-7">{facility.desc}</p>
+            <p className="opacity-80 text-[13px] xl:text-lg leading-7">
+              {facility.desc}
+            </p>
           </div>
         </div>
 

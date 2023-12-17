@@ -6,6 +6,7 @@ export default {
       screens: {
         vsm: "450px",
         xmd: "850px",
+        xl: "1100px",
       },
       fontFamily: {
         Miracle: ["Miracle", "cursive"],

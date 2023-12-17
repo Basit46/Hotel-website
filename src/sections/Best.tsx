@@ -5,19 +5,19 @@ const Best = () => {
   return (
     <section className="relative">
       <img src={bg} alt="Apartment" />
-      <div className="absolute top-0 left-0 w-full h-full px-[60px] pt-[100px]">
-        <div className="mb-[100px] text-yellow text-[125px] font-Miracle uppercase leading-[105px]">
+      <div className="absolute top-0 left-0 w-full h-full px-[20px] xl:px-[60px] pt-[30px] xl:pt-[100px]">
+        <div className="mb-[100px] text-yellow text-[100px] xl:text-[125px] font-Miracle uppercase leading-[1] xl:leading-[105px]">
           Best
           <br />
           apartments
         </div>
-        <div className="w-[330px] text-yellow text-lg uppercase">
+        <div className="w-[231px] xl:w-[330px] text-yellow text-lg uppercase">
           All room decoration was made with ecological certified and safe
           materials.
         </div>
       </div>
       <img
-        className="absolute bottom-[94px] left-0"
+        className="absolute bottom-[70px] xl:bottom-[94px] left-0"
         src={line}
         alt="wavy line"
       />

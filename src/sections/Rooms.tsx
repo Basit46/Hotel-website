@@ -18,22 +18,22 @@ const Rooms = () => {
   return (
     <section
       id="rooms"
-      className="rooms-section mt-[250px] pt-[200px] pb-[100px] w-full px-[60px] h-fit bg-[#FFFCF6] text-[#1B3B36] "
+      className="rooms-section mt-[250px] pt-[150px] xl:pt-[200px] pb-[50px] w-full px-[20px] xl:px-[60px] h-fit bg-[#FFFCF6] text-[#1B3B36] "
     >
       <div className="flex justify-between">
-        <h1 className=" text-[100px] font-Miracle uppercase leading-[105px]">
+        <h1 className="mt-[100px] xl:mt-0 text-[100px] font-Miracle uppercase leading-[105px]">
           Rooms
           <br />& apartments
         </h1>
-        <p className="w-[27%]  text-lg uppercase">
+        <p className="w-[20%] xl:w-[27%] text-[16px] xl:text-lg uppercase">
           All room decoration was made with ecological certified and safe
           materials.
         </p>
       </div>
 
       <div className="w-full mt-[100px] flex justify-between">
-        <div className="pt-[30px] flex flex-col justify-between">
-          <div className="w-[217px] h-[259px] relative overflow-hidden">
+        <div className="xl:pt-[30px] flex flex-col justify-center xl:justify-between">
+          <div className="hidden xl:block w-[217px] h-[259px] relative overflow-hidden">
             {rooms.map((room, index) => (
               <div
                 key={index}
@@ -41,7 +41,7 @@ const Rooms = () => {
                   currentRoom == index
                     ? "right-0"
                     : "right-[100%] duration-1000 z-[1]"
-                } absolute top-0 w-[217px] h-[259px]`}
+                }  absolute top-0 w-[217px] h-[259px]`}
               >
                 <img
                   className="w-full h-full bg-cover"
@@ -54,18 +54,18 @@ const Rooms = () => {
 
           <img
             onClick={handleScroll}
-            className="w-fit h-fit"
+            className="w-[105px] xl:w-fit h-fit"
             src={roomBtn}
             alt="Room Button"
           />
         </div>
 
         <div className="pt-[30px] w-[30%] flex flex-col justify-between">
-          <div className="w-fit flex items-center gap-[10px] border border-[#313F38] border-opacity-[0.48] px-[25px] py-[10px] rounded-[50px]">
+          <div className="w-fit hidden xl:flex items-center gap-[10px] border border-[#313F38] border-opacity-[0.48] px-[25px] py-[10px] rounded-[50px]">
             <img src={starImg} alt="Star Icon" />
             <p className="text-[22px]">Since 1973</p>
           </div>
-          <div className="mt-[90px]">
+          <div className="mt-[40px] xl:mt-[90px]">
             <h1 className="relative text-4xl font-Miracle capitalize tracking-wide">
               {rooms.map((room, index) => (
                 <Link
@@ -80,7 +80,7 @@ const Rooms = () => {
                 </Link>
               ))}
             </h1>
-            <div className="mt-[40px] h-[40px] w-[30px]"></div>
+            <div className="mt-[40px] h-[25px] xl:h-[40px] w-[30px]"></div>
             <p className="relative text-lg leading-7">
               {rooms.map((room, index) => (
                 <span
@@ -95,14 +95,14 @@ const Rooms = () => {
               ))}
             </p>
           </div>
-          <div className="mt-[40px] h-[40px] w-[30px]"></div>
+          <div className="mt-[40px] h-[60px] xl:h-[40px] w-[30px]"></div>
           <p className="text-[22px]">
             0{currentRoom + 1} <span className="opacity-30">/ 04</span>
           </p>
         </div>
 
-        <div className="w-[40%] 2xl:w-fit relative bg-[red]">
-          <div className="w-full h-[650px] relative overflow-x-hidden">
+        <div className="w-[40%] relative bg-[red]">
+          <div className="w-full h-[476px] xl:h-[650px] relative overflow-x-hidden">
             {rooms.map((room, index) => (
               <div
                 key={index}
@@ -120,10 +120,10 @@ const Rooms = () => {
               </div>
             ))}
           </div>
-          <div className="absolute bottom-[50px] right-[50px]">
+          <div className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px]">
             <div className="relative flex justify-center items-center">
               <svg
-                className="btnBg"
+                className="btnBg w-[120px] h-[120px] xl:w-fit xl:h-fit"
                 width="167"
                 height="175"
                 viewBox="0 0 167 175"
