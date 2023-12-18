@@ -5,7 +5,7 @@ export default {
     extend: {
       screens: {
         vsm: "450px",
-        xmd: "850px",
+        xmd: "900px",
         xl: "1100px",
       },
       fontFamily: {

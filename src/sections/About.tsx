@@ -19,14 +19,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="absolute z-[1] top-[120px] xl:top-[150px] left-[20%] xl:left-[35%]">
-        <h1 className="text-right text-[100px] xl:text-[125px] font-Miracle leading-[105px] text-yellow">
-          ABOUT <br /> <span className="text-[#fffcf6]">US</span>
+      <div className="md:absolute pl-[20px] md:pl-0 z-[1] top-[120px] xl:top-[150px] left-[20%] xl:left-[35%]">
+        <h1 className="w-fit md:w-full text-right text-[100px] xl:text-[125px] font-Miracle leading-[105px] text-yellow">
+          ABOUT <br /> <span className="text-yellow md:text-[#fffcf6]">US</span>
         </h1>
       </div>
 
-      <div className="relative w-full h-full mt-[100px] px-[20px] xl:px-[60px] flex justify-between">
-        <div className="w-[35%] xl:w-[481px] h-full">
+      <div className="relative w-full h-full mt-[100px] px-[20px] xl:px-[60px] flex flex-col md:flex-row gap-[56px] md:gap-0 justify-between">
+        <div className="w-fit md:w-[35%] xl:w-[481px] h-fit md:h-full">
           <img
             className="h-full w-full object-cover"
             src={img1}
@@ -34,7 +34,7 @@ const About = () => {
           />
         </div>
 
-        <div className="w-[28%] xl:w-[30%] self-end">
+        <div className="w-[60%] md:w-[28%] xl:w-[30%] md:self-end">
           <h1 className="mt-[10px] text-[28px] xl:text-4xl font-Miracle capitalize tracking-wide">
             High quality
           </h1>
@@ -46,7 +46,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="relative flex flex-col justify-between">
+        <div className="hidden relative md xmd:flex flex-col justify-between">
           <img
             className="absolute top-[-70px] left-[-80px]"
             src={label}

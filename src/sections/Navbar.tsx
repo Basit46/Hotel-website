@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -8,7 +9,7 @@ const Navbar = () => {
         BankHotel
       </Link>
 
-      <ul className="flex gap-[40px] items-center">
+      <ul className="hidden xl:flex gap-[40px] items-center">
         <li>
           <NavLink to="/">HOME</NavLink>
         </li>
@@ -39,7 +40,11 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <p className="text-base uppercase leading-tight">+38 032 297 50 20</p>
+      <p className="hidden xl:block text-base uppercase leading-tight">
+        +38 032 297 50 20
+      </p>
+
+      <FaBars className="block xl:hidden" />
     </nav>
   );
 };

@@ -8,28 +8,30 @@ const Hero = () => {
   const { setOpenBookingModal } = useGlobalContext();
   return (
     <section className="hero w-full mt-[40px] px-[20px] xl:px-[60px]">
-      <div className="w-full flex justify-between">
-        <div>
-          <h1 className="text-[120px] xl:text-[140px] 2xl:text-[170px] font-Miracle leading-[1.2]">
+      <div className="w-full flex flex-col xmd:flex-row items-center xl:items-start justify-between">
+        <div className="mb-[24px] xmd:mb-0">
+          <h1 className="text-[120px] text-center xmd:text-start xl:text-[140px] 2xl:text-[170px] font-Miracle leading-[1.2]">
             Bank<span className="text-yellow">Hotel</span>
           </h1>
-          <p className="mt-[19px] text-[14px] xl:text-lg text-yellow uppercase">
+          <p className="mt-[19px] text-center xmd:text-start text-[14px] xl:text-lg text-yellow uppercase">
             rooms // restaurant // congress hall // wine bar
           </p>
         </div>
 
-        <div className="w-[20%] xl:w-[28%] order-3 xl:order-2">
+        <div className="w-[50%] mb-[24px] h-0 border-t border-t-[#FFFCF6] border-opacity-[0.12] xmd:hidden"></div>
+
+        <div className="w-[60%] xmd:w-[20%] xl:w-[28%] order-3 xl:order-2">
           <div className="w-fit hidden xl:flex items-center gap-[10px] border border-[#FFFCF6] border-opacity-[0.32] px-[25px] py-[10px] rounded-[50px]">
             <img src={starImg} alt="Star Icon" />
             <p className="text-[22px]">Since 1973</p>
           </div>
-          <p className="xl:mt-[96px] text-[13px] xl:text-base leading-relaxed opacity-80">
+          <p className="xl:mt-[96px] text-center xmd:text-start text-[13px] xl:text-base leading-relaxed opacity-80">
             The luxurious hotel in the most beautiful European city with an
             exclusive restaurant, conference-hall, and art-bar.
           </p>
         </div>
 
-        <div className="order-2 xl:order-3">
+        <div className="hidden xmd:block order-2 xl:order-3">
           <img src={heroBtn} alt="Down Button Icon" />
         </div>
       </div>
@@ -38,7 +40,7 @@ const Hero = () => {
         <div className="relative">
           <img src={heroImg} alt="Hero Main Image" />
 
-          <div className="absolute bottom-0 xl:top-0 right-0 flex">
+          <div className="absolute bottom-[20px] xmd:bottom-0 xl:top-0 right-[20px] xmd:right-0 flex">
             <div className="button blurbg flex gap-[90px] items-center justify-between">
               <p className="text-base font-medium leading-tight">CHECK IN</p>
               <img src={arrowDown} alt="arrow" />
@@ -53,6 +55,24 @@ const Hero = () => {
             >
               <p className="text-black text-lg font-medium uppercase leading-tight">
                 book room
+              </p>
+            </div>
+            <div className="relative flex xmd:hidden justify-center items-center">
+              <svg
+                className="btnBg w-[120px] h-[120px] xl:w-fit xl:h-fit fill-yellow"
+                width="167"
+                height="175"
+                viewBox="0 0 167 175"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M83.5 0L134.931 16.711L166.717 60.461V114.539L134.931 158.289L83.5 175L32.0688 158.289L0.282555 114.539V60.461L32.0688 16.711L83.5 0Z"
+                  fill=""
+                />
+              </svg>
+              <p className="w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#1B3B36] text-center italic">
+                Book Room
               </p>
             </div>
           </div>
