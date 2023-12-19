@@ -18,19 +18,19 @@ const Rooms = () => {
   return (
     <section
       id="rooms"
-      className="rooms-section mt-[250px] pt-[150px] xl:pt-[200px] pb-[50px] w-full px-[20px] xl:px-[60px] h-fit bg-[#FFFCF6] text-[#1B3B36] "
+      className="rooms-section mt-[70px] vsm:mt-[250px] pt-[100px] vsm:pt-[150px] xl:pt-[200px] pb-[200px] vsm:pb-[50px] w-full px-[20px] xl:px-[60px] h-fit bg-[#FFFCF6] text-[#1B3B36] "
     >
       <div className="flex flex-col md:flex-row justify-between">
-        <h1 className="md:mt-[100px] xl:mt-0 text-[60px] vsm:text-[75px] md:text-[100px] font-Miracle uppercase leading-[105px]">
+        <h1 className="md:mt-[100px] xl:mt-0 text-[50px] vsm:text-[75px] md:text-[100px] font-Miracle uppercase leading-[1.2]">
           Rooms <br className="hidden md:block" />& apartments
         </h1>
-        <p className="mt-[50px] md:mt-0 w-[50%] md:w-[20%] xl:w-[27%] text-[16px] xl:text-lg uppercase">
+        <p className="mt-[50px] md:mt-0 w-[85%] vsm:w-[50%] md:w-[20%] xl:w-[27%] text-[16px] xl:text-lg uppercase">
           All room decoration was made with ecological certified and safe
           materials.
         </p>
       </div>
 
-      <div className="mt-[100px] md:hidden w-full relative bg-[red]">
+      <div className="mt-[100px] md:hidden w-full relative">
         <div className="w-full h-[476px] xl:h-[650px] relative overflow-x-hidden">
           {rooms.map((room, index) => (
             <div
@@ -70,11 +70,26 @@ const Rooms = () => {
           </div>
         </div>
       </div>
-      <p className="md:hidden text-end mt-[30px] mb-[45px] text-[22px]">
+      <p className="md:hidden text-end mt-[30px] text-[22px]">
         0{currentRoom + 1} <span className="opacity-30">/ 04</span>
       </p>
+      <h1 className="vsm:hidden text-4xl relative font-Miracle capitalize tracking-wide">
+        {rooms.map((room, index) => (
+          <Link
+            key={index}
+            to={`room/${room.id}`}
+            className={`${
+              currentRoom == index
+                ? "opacity-100 duration-500"
+                : "opacity-0 vsm:translate-y-[100%]"
+            } absolute text-left top-0 left-0`}
+          >
+            {room.name}
+          </Link>
+        ))}
+      </h1>
 
-      <div className="w-full md:mt-[100px] gap-[50px] md:gap-0 flex md:justify-between">
+      <div className="w-full mt-[30px] md:mt-[100px] gap-[30px] vsm:gap-[50px] md:gap-0 flex md:justify-between">
         <div className="xl:pt-[30px] flex flex-col justify-center xl:justify-between">
           <div className="hidden xl:block w-[217px] h-[259px] relative overflow-hidden">
             {rooms.map((room, index) => (
@@ -97,7 +112,7 @@ const Rooms = () => {
 
           <img
             onClick={handleScroll}
-            className="w-[105px] xl:w-fit h-fit"
+            className="w-[70px] vsm:w-[105px] xl:w-fit h-fit"
             src={roomBtn}
             alt="Room Button"
           />
@@ -109,7 +124,7 @@ const Rooms = () => {
             <p className="text-[22px]">Since 1973</p>
           </div>
           <div className="mt-[40px] xl:mt-[90px]">
-            <h1 className="relative text-4xl font-Miracle capitalize tracking-wide">
+            <h1 className="hidden md:block relative text-4xl font-Miracle capitalize tracking-wide">
               {rooms.map((room, index) => (
                 <Link
                   key={index}
@@ -124,7 +139,7 @@ const Rooms = () => {
                 </Link>
               ))}
             </h1>
-            <div className="mt-[40px] h-[25px] xl:h-[40px] w-[30px]"></div>
+            <div className="hidden md:block mt-[40px] h-[25px] xl:h-[40px] w-[30px]"></div>
             <p className="relative text-lg leading-7">
               {rooms.map((room, index) => (
                 <span

@@ -32,7 +32,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
 
       <div className="relative mt-[150px] flex gap-[70px]">
         <div className="h-fit flex gap-[40px]">
-          <h1 className="relative whitespace-nowrap z-[1] h-fit text-[100px] md:text-[150px] xl:text-[200px] font-Miracle uppercase leading-[200px]">
+          <h1 className="relative whitespace-nowrap z-[1] h-fit text-[84px] vsm:text-[100px] md:text-[150px] xl:text-[200px] font-Miracle uppercase leading-[200px]">
             Get in
           </h1>
           <img
@@ -47,7 +47,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
           alt="hotel room"
         />
       </div>
-      <h1 className="relative h-fit mt-[-100px] xl:mt-[-60px] text-end text-[100px] md:text-[150px] xl:text-[200px] text-yellow font-Miracle uppercase leading-[200px]">
+      <h1 className="relative h-fit mt-[-100px] xl:mt-[-60px] text-end text-[84px] vsm:text-[100px] md:text-[150px] xl:text-[200px] text-yellow font-Miracle uppercase leading-[200px]">
         TOUCH
       </h1>
 

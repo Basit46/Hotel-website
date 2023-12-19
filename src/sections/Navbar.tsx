@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-[20] bg-green w-full px-[60px] py-[30px] flex justify-between items-center">
+    <nav className="sticky top-0 z-[20] bg-green w-full px-[20px] xl:px-[60px] py-[18px] vsm:py-[30px] flex justify-between items-center">
       <Link to="/" className="text-xl font-medium">
         BankHotel
       </Link>

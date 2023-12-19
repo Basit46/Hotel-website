@@ -10,7 +10,7 @@ const About = () => {
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="relative w-full h-full">
           <div className="absolute top-0 right-0 w-[58%] border-t border-[#3F5148]"></div>
-          <div className="absolute top-0 right-0 w-[25%] h-full border-l border-[#3F5148]"></div>
+          <div className="absolute top-0 right-0 w-[25%] h-[50vh] vsm:h-full border-l border-[#3F5148]"></div>
           <div className="absolute top-0 right-[25%] w-[66vw] h-[66vw] rounded-full border border-[#3F5148]">
             <div className="relative w-full h-full">
               <div className="absolute top-[50%] right-0 w-full h-[50%] bg-green"></div>
@@ -20,12 +20,12 @@ const About = () => {
       </div>
 
       <div className="md:absolute pl-[20px] md:pl-0 z-[1] top-[120px] xl:top-[150px] left-[20%] xl:left-[35%]">
-        <h1 className="w-fit md:w-full text-right text-[100px] xl:text-[125px] font-Miracle leading-[105px] text-yellow">
+        <h1 className="relative vsm:static w-fit md:w-full z-[1] vsm:z-0 text-right text-[60px] vsm:text-[100px] xl:text-[125px] font-Miracle leading-[1.2] text-yellow">
           ABOUT <br /> <span className="text-yellow md:text-[#fffcf6]">US</span>
         </h1>
       </div>
 
-      <div className="relative w-full h-full mt-[100px] px-[20px] xl:px-[60px] flex flex-col md:flex-row gap-[56px] md:gap-0 justify-between">
+      <div className="relative w-full h-full mt-[50px] vsm:mt-[100px] px-[20px] xl:px-[60px] flex flex-col md:flex-row gap-[56px] md:gap-0 justify-between">
         <div className="w-fit md:w-[35%] xl:w-[481px] h-fit md:h-full">
           <img
             className="h-full w-full object-cover"
@@ -34,7 +34,7 @@ const About = () => {
           />
         </div>
 
-        <div className="w-[60%] md:w-[28%] xl:w-[30%] md:self-end">
+        <div className="w-[85%] vsm:w-[60%] md:w-[28%] xl:w-[30%] md:self-end">
           <h1 className="mt-[10px] text-[28px] xl:text-4xl font-Miracle capitalize tracking-wide">
             High quality
           </h1>

@@ -9,13 +9,13 @@ const Facilities = () => {
     <section className="facilities-section w-full mt-[-3px] pb-[200px] py-[80px] px-[20px] xl:px-[60px] bg-[#FFFCF6] text-[#1B3B36]">
       <div className="pt-[80px] border-t border-t-[#313F38]">
         <div className="w-full flex xmd:gap-[120px] xl:gap-0 justify-start xl:justify-between xl:flex-row">
-          <p className="w-auto xl:w-fit flex-1 xl:flex-auto text-end xl:text-start text-lg uppercase order-3 xl:order-1">
-            Art & <br /> Congress hall
+          <p className="w-auto xl:w-fit flex-1 xl:flex-auto text-end xl:text-start text-[16px] md:text-lg uppercase order-3 xl:order-1">
+            Art & <br className="hidden vsm:block" /> Congress hall
           </p>
 
-          <h1 className="xl:translate-x-[-80px] text-[80px] md:text-[100px] font-Miracle leading-[105px] order-2">
+          <h1 className="xl:translate-x-[-80px] text-[60px] vsm:text-[80px] md:text-[100px] font-Miracle leading-[1.2] vsm:leading-[105px] order-2">
             OUR <br /> FACI <br />
-            <span className="pl-[80px] flex items-center gap-[65px]">
+            <span className="pl-[30px] vsm:pl-[80px] flex items-center gap-[20px] vsm:gap-[65px]">
               <img src={starImg} alt="star" /> LITIES
             </span>
           </h1>
@@ -33,7 +33,7 @@ const Facilities = () => {
             src={img2}
             alt="Hotel facility"
           />
-          <p className="self-end md:mb-[-100px] w-[300px] text-[13px] xl:text-base opacity-80 leading-7">
+          <p className="self-center vsm:self-end md:mb-[-100px] w-[80%] vsm:w-[300px] text-center vsm:text-left text-[13px] xl:text-base opacity-80 leading-7">
             Bank Hotel offers you a wide range of additional services and
             facilities. Visit our restaurant to try exclusive meals, book a
             conference hall to organize a business meeting, or relax in the

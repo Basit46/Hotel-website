@@ -29,7 +29,7 @@ const Facility = ({ facility, index }: FacilityPropType) => {
         } relative overflow-hidden flex gap-[30px] md:gap-0 flex-col md:flex-row justify-between items-center`}
       >
         <img
-          className="w-[189px] xl:w-[217px] xl:h-[217px]"
+          className="w-[157px] vsm:w-[189px] xl:w-[217px] xl:h-[217px]"
           src={facility.img}
           alt="Hotel Facility"
         />
@@ -41,10 +41,10 @@ const Facility = ({ facility, index }: FacilityPropType) => {
           duration={500}
           smooth={true}
         >
-          <span className="absolute md:static top-0 right-[20px]">
+          <span className="absolute md:static top-0 right-[5px] vsm:right-[20px] text-[30px] vsm:text-[40px]">
             0{index + 1}
           </span>
-          <span>{facility.name}</span>
+          <span className="text-[24px] vsm:text-[40px]">{facility.name}</span>
         </ScrollLink>
 
         <Link className="hidden md:block" to={`facility/${facility.id}`}>
