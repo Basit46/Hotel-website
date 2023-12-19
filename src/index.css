@@ -28,10 +28,6 @@ body {
     @apply hidden w-[250px] h-fit xl:w-[300px] py-[30px] xmd:flex justify-center;
   }
 
-  .facilities-section .facility {
-    @apply flex justify-between items-center;
-  }
-
   .galllery-section h1 {
     @apply font-Miracle text-[100px] hover:text-white duration-200 whitespace-nowrap;
     color: rgba(255, 252, 246, 0.12);

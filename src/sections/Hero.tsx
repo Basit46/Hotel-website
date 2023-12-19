@@ -10,7 +10,7 @@ const Hero = () => {
     <section className="hero w-full mt-[40px] px-[20px] xl:px-[60px]">
       <div className="w-full flex flex-col xmd:flex-row items-center xl:items-start justify-between">
         <div className="mb-[24px] xmd:mb-0">
-          <h1 className="text-[120px] text-center xmd:text-start xl:text-[140px] 2xl:text-[170px] font-Miracle leading-[1.2]">
+          <h1 className="text-[80px] md:text-[120px] text-center xmd:text-start xl:text-[140px] 2xl:text-[170px] font-Miracle leading-[1.2]">
             Bank<span className="text-yellow">Hotel</span>
           </h1>
           <p className="mt-[19px] text-center xmd:text-start text-[14px] xl:text-lg text-yellow uppercase">

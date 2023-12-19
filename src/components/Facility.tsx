@@ -23,7 +23,11 @@ const Facility = ({ facility, index }: FacilityPropType) => {
       id={facility.id}
       className="mt-[50px] pb-[40px] border-b border-b-[#313F38] border-opacity-[0.24]"
     >
-      <div className={`facility ${isOpen ? "h-0" : "h-fit"} overflow-hidden`}>
+      <div
+        className={`facility ${
+          isOpen ? "h-0" : "h-fit"
+        } relative overflow-hidden flex gap-[30px] md:gap-0 flex-col md:flex-row justify-between items-center`}
+      >
         <img
           className="w-[189px] xl:w-[217px] xl:h-[217px]"
           src={facility.img}
@@ -32,15 +36,18 @@ const Facility = ({ facility, index }: FacilityPropType) => {
 
         <ScrollLink
           to={facility.id}
-          className="cursor-pointer ml-[100px] flex-1 flex gap-[70px] text-[40px] font-Miracle capitalize leading-[50px] tracking-wider"
+          className="cursor-pointer md:ml-[100px] flex-1 flex gap-[70px] text-[40px] font-Miracle capitalize leading-[50px] tracking-wider"
           onClick={() => setIsOpen(true)}
           duration={500}
           smooth={true}
         >
-          <span>0{index + 1}</span>
+          <span className="absolute md:static top-0 right-[20px]">
+            0{index + 1}
+          </span>
           <span>{facility.name}</span>
         </ScrollLink>
-        <Link to={`facility/${facility.id}`}>
+
+        <Link className="hidden md:block" to={`facility/${facility.id}`}>
           <img
             onClick={() => setIsOpen(true)}
             className="w-[44px] xl:w-fit cursor-pointer"

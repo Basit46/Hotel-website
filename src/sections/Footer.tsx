@@ -30,9 +30,9 @@ const Footer = ({ whiteBg }: FooterPropType) => {
         8 Lystopadovoho Chynu,Lviv
       </p>
 
-      <div className="mt-[150px] flex gap-[70px]">
-        <div className="h-fit flex  gap-[40px]">
-          <h1 className="relative whitespace-nowrap z-[1] h-fit text-[150px] xl:text-[200px] font-Miracle uppercase leading-[200px]">
+      <div className="relative mt-[150px] flex gap-[70px]">
+        <div className="h-fit flex gap-[40px]">
+          <h1 className="relative whitespace-nowrap z-[1] h-fit text-[100px] md:text-[150px] xl:text-[200px] font-Miracle uppercase leading-[200px]">
             Get in
           </h1>
           <img
@@ -41,15 +41,19 @@ const Footer = ({ whiteBg }: FooterPropType) => {
             alt="star"
           />
         </div>
-        <img className="w-[233px] xl:w-fit" src={hotelImg} alt="hotel room" />
+        <img
+          className="absolute top-[230px] right-[20px] md:static w-[233px] xl:w-fit"
+          src={hotelImg}
+          alt="hotel room"
+        />
       </div>
-      <h1 className="h-fit mt-[-100px] xl:mt-[-60px] text-end text-[150px] xl:text-[200px] text-yellow font-Miracle uppercase leading-[200px]">
+      <h1 className="relative h-fit mt-[-100px] xl:mt-[-60px] text-end text-[100px] md:text-[150px] xl:text-[200px] text-yellow font-Miracle uppercase leading-[200px]">
         TOUCH
       </h1>
 
       <img className="absolute top-[13%] left-0" src={curve} alt="curve" />
 
-      <div className="pb-[150px]">
+      <div className="pb-[150px] hidden md:block">
         <h1 className="text-[26px] uppercase">Find a room</h1>
 
         <div className="flex">
@@ -71,14 +75,14 @@ const Footer = ({ whiteBg }: FooterPropType) => {
 
       <div
         id="contact"
-        className="py-[100px] border-t border-t-[#313F38] border-opacity-[0.24] flex justify-between"
+        className="py-[100px] border-t border-t-[#313F38] border-opacity-[0.24] flex gap-[50px] md:gap-0 flex-col md:flex-row justify-between"
       >
         <div>
           <h1 className="text-[26px] uppercase">
             <span className="text-yellow text-[26px] uppercase">/</span>
             About us
           </h1>
-          <p className="mt-[40px] mb-[70px] w-[285px] opacity-80 text-base leading-7">
+          <p className="mt-[10px] md:mt-[40px] mb-[10px] md:mb-[70px] w-[285px] opacity-80 text-base leading-7">
             The five-star hotel in a beautiful European city with a modern
             restaurant, conference-hall, and art-bar.
           </p>
@@ -92,7 +96,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
             <span className="text-amber-300 text-[26px] uppercase">/</span>
             news
           </h1>
-          <p className="mt-[40px] mb-[70px] w-[285px] opacity-80 text-base leading-7">
+          <p className="mt-[10px] md:mt-[40px] mb-[10px] md:mb-[70px] w-[285px] opacity-80 text-base leading-7">
             Sign up to our newsletter not to miss exclusive offers and
             information about the upcoming events.
           </p>
@@ -111,7 +115,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
             <span className="text-amber-300 text-[26px] uppercase">/</span>
             social
           </h1>
-          <p className="mt-[40px] flex flex-col xl:flex-row gap-[30px]">
+          <p className="mt-[10px] md:mt-[40px] flex flex-col xl:flex-row gap-[10px] md:gap-[30px]">
             <a
               href="#"
               target="blank"

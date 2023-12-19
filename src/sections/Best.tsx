@@ -3,10 +3,10 @@ import line from "../assets/lineVector.png";
 
 const Best = () => {
   return (
-    <section className="relative">
+    <section className="relative w-full h-full">
       <img src={bg} alt="Apartment" />
       <div className="absolute top-0 left-0 w-full h-full px-[20px] xl:px-[60px] pt-[30px] xl:pt-[100px]">
-        <div className="mb-[100px] text-yellow text-[100px] xl:text-[125px] font-Miracle uppercase leading-[1] xl:leading-[105px]">
+        <div className="md:mb-[100px] text-yellow text-[70px] xmd:text-[100px] xl:text-[125px] font-Miracle uppercase leading-[1] xl:leading-[105px]">
           Best
           <br />
           apartments

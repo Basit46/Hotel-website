@@ -6,14 +6,14 @@ import { facilities } from "../data/facilitiesList";
 
 const Facilities = () => {
   return (
-    <section className="facilities-section mt-[-3px] pb-[200px] py-[80px] px-[20px] xl:px-[60px] bg-[#FFFCF6] text-[#1B3B36]">
+    <section className="facilities-section w-full mt-[-3px] pb-[200px] py-[80px] px-[20px] xl:px-[60px] bg-[#FFFCF6] text-[#1B3B36]">
       <div className="pt-[80px] border-t border-t-[#313F38]">
-        <div className="w-full flex gap-[120px] xl:gap-0 justify-start xl:justify-between xl:flex-row">
+        <div className="w-full flex xmd:gap-[120px] xl:gap-0 justify-start xl:justify-between xl:flex-row">
           <p className="w-auto xl:w-fit flex-1 xl:flex-auto text-end xl:text-start text-lg uppercase order-3 xl:order-1">
             Art & <br /> Congress hall
           </p>
 
-          <h1 className="xl:translate-x-[-80px] text-[100px] font-Miracle leading-[105px] order-2">
+          <h1 className="xl:translate-x-[-80px] text-[80px] md:text-[100px] font-Miracle leading-[105px] order-2">
             OUR <br /> FACI <br />
             <span className="pl-[80px] flex items-center gap-[65px]">
               <img src={starImg} alt="star" /> LITIES
@@ -21,19 +21,19 @@ const Facilities = () => {
           </h1>
 
           <img
-            className="opacity-0 xl:opacity-100 w-[245px] xl:w-fit block h-fit order-1 xl:order-3"
+            className="hidden opacity-0 xl:opacity-100 w-[245px] xl:w-fit xmd:block h-fit order-1 xl:order-3"
             src={img1}
             alt="Hotel facility"
           />
         </div>
 
-        <div className="xl:mt-[70px] flex gap-[120px] xl:gap-[60px] items-end">
+        <div className="mt-[50px] xmd:mt-0 xl:mt-[70px] flex flex-col md:flex-row gap-[30px] md:gap-[120px] xl:gap-[60px] items-center md:items-end">
           <img
             className="w-[245px] xl:w-fit h-fit"
             src={img2}
             alt="Hotel facility"
           />
-          <p className="mb-[-100px] w-[300px] text-[13px] xl:text-base opacity-80 leading-7">
+          <p className="self-end md:mb-[-100px] w-[300px] text-[13px] xl:text-base opacity-80 leading-7">
             Bank Hotel offers you a wide range of additional services and
             facilities. Visit our restaurant to try exclusive meals, book a
             conference hall to organize a business meeting, or relax in the
@@ -41,7 +41,7 @@ const Facilities = () => {
           </p>
         </div>
 
-        <div className="mt-[200px] w-full h-fit">
+        <div className="mt-[80px] md:mt-[200px] w-full h-fit">
           {facilities.map((facility, index) => (
             <Facility key={index} facility={facility} index={index} />
           ))}

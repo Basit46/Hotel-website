@@ -20,18 +20,61 @@ const Rooms = () => {
       id="rooms"
       className="rooms-section mt-[250px] pt-[150px] xl:pt-[200px] pb-[50px] w-full px-[20px] xl:px-[60px] h-fit bg-[#FFFCF6] text-[#1B3B36] "
     >
-      <div className="flex justify-between">
-        <h1 className="mt-[100px] xl:mt-0 text-[100px] font-Miracle uppercase leading-[105px]">
-          Rooms
-          <br />& apartments
+      <div className="flex flex-col md:flex-row justify-between">
+        <h1 className="md:mt-[100px] xl:mt-0 text-[60px] vsm:text-[75px] md:text-[100px] font-Miracle uppercase leading-[105px]">
+          Rooms <br className="hidden md:block" />& apartments
         </h1>
-        <p className="w-[20%] xl:w-[27%] text-[16px] xl:text-lg uppercase">
+        <p className="mt-[50px] md:mt-0 w-[50%] md:w-[20%] xl:w-[27%] text-[16px] xl:text-lg uppercase">
           All room decoration was made with ecological certified and safe
           materials.
         </p>
       </div>
 
-      <div className="w-full mt-[100px] flex justify-between">
+      <div className="mt-[100px] md:hidden w-full relative bg-[red]">
+        <div className="w-full h-[476px] xl:h-[650px] relative overflow-x-hidden">
+          {rooms.map((room, index) => (
+            <div
+              key={index}
+              className={`${
+                currentRoom == index
+                  ? "right-0"
+                  : "right-[100%] duration-1000 z-[1]"
+              } absolute top-0 w-full h-full`}
+            >
+              <img
+                className="w-full h-full bg-cover"
+                src={room.img1}
+                alt="Hotel Room"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px]">
+          <div className="relative flex justify-center items-center">
+            <svg
+              className="btnBg w-[120px] h-[120px] xl:w-fit xl:h-fit"
+              width="167"
+              height="175"
+              viewBox="0 0 167 175"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M83.5 0L134.931 16.711L166.717 60.461V114.539L134.931 158.289L83.5 175L32.0688 158.289L0.282555 114.539V60.461L32.0688 16.711L83.5 0Z"
+                fill=""
+              />
+            </svg>
+            <p className="w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center italic">
+              Book Room
+            </p>
+          </div>
+        </div>
+      </div>
+      <p className="md:hidden text-end mt-[30px] mb-[45px] text-[22px]">
+        0{currentRoom + 1} <span className="opacity-30">/ 04</span>
+      </p>
+
+      <div className="w-full md:mt-[100px] gap-[50px] md:gap-0 flex md:justify-between">
         <div className="xl:pt-[30px] flex flex-col justify-center xl:justify-between">
           <div className="hidden xl:block w-[217px] h-[259px] relative overflow-hidden">
             {rooms.map((room, index) => (
@@ -60,7 +103,7 @@ const Rooms = () => {
           />
         </div>
 
-        <div className="pt-[30px] w-[30%] flex flex-col justify-between">
+        <div className="md:pt-[30px] flex-1 md:flex-none md:w-[30%] flex flex-col justify-between">
           <div className="w-fit hidden xl:flex items-center gap-[10px] border border-[#313F38] border-opacity-[0.48] px-[25px] py-[10px] rounded-[50px]">
             <img src={starImg} alt="Star Icon" />
             <p className="text-[22px]">Since 1973</p>
@@ -69,6 +112,7 @@ const Rooms = () => {
             <h1 className="relative text-4xl font-Miracle capitalize tracking-wide">
               {rooms.map((room, index) => (
                 <Link
+                  key={index}
                   to={`room/${room.id}`}
                   className={`${
                     currentRoom == index
@@ -96,12 +140,12 @@ const Rooms = () => {
             </p>
           </div>
           <div className="mt-[40px] h-[60px] xl:h-[40px] w-[30px]"></div>
-          <p className="text-[22px]">
+          <p className="hidden xmd:block text-[22px]">
             0{currentRoom + 1} <span className="opacity-30">/ 04</span>
           </p>
         </div>
 
-        <div className="w-[40%] relative bg-[red]">
+        <div className="hidden md:block w-[40%] relative">
           <div className="w-full h-[476px] xl:h-[650px] relative overflow-x-hidden">
             {rooms.map((room, index) => (
               <div
