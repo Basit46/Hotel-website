@@ -53,7 +53,7 @@ const MusicPlayer = () => {
 
       <div
         className={`${
-          isOpen ? "w-[300px] pl-[20px]" : "w-0"
+          isOpen ? "w-[70vw] vsm:w-[300px] pl-[10px] vsm:pl-[20px]" : "w-0"
         } duration-500 overflow-hidden flex flex-col items-center `}
       >
         <div className="w-full whitespace-nowrap mb-[4px] pb-[2px] border-b border-b-gray-600 flex justify-center gap-[5px] font-Miracle">

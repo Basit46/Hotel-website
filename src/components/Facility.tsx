@@ -60,36 +60,44 @@ const Facility = ({ facility, index }: FacilityPropType) => {
       <div
         className={`${
           isOpen ? "h-auto" : "h-0"
-        } w-full flex justify-between overflow-hidden duration-300`}
+        } w-full  overflow-hidden duration-300`}
       >
-        <div className="pt-[30px] flex flex-col justify-end">
-          <img
-            onClick={() => setIsOpen(false)}
-            className="w-[105px] xl:w-fit h-fit rotate-[90deg] mb-[120px] cursor-pointer"
-            src={roomBtn}
-            alt="Room Button"
-          />
-        </div>
-
-        <div className="pt-[60px] w-[28%] xl:w-[30%] flex flex-col justify-between">
-          <p className="text-[50px] font-normal font-Miracle uppercase">
-            0{index + 1}
-          </p>
-          <div className="">
-            <h1 className="mb-[30px] text-4xl font-Miracle capitalize tracking-wide">
-              {facility.name}
-            </h1>
-            <p className="opacity-80 text-[13px] xl:text-lg leading-7">
-              {facility.desc}
-            </p>
-          </div>
-        </div>
-
         <img
-          className="w-[35%] 2xl:w-fit"
+          className="md:hidden block w-full"
           src={facility.img}
           alt="Hotel Facility"
         />
+
+        <div className="flex justify-between">
+          <div className="pt-[10px] md:pt-[30px] flex flex-col justify-start md:justify-end">
+            <img
+              onClick={() => setIsOpen(false)}
+              className="w-[70px] vsm:w-[105px] xl:w-fit h-fit rotate-[90deg] md:mb-[120px] cursor-pointer"
+              src={roomBtn}
+              alt="Room Button"
+            />
+          </div>
+
+          <div className="pt-0 md:pt-[60px] ml-[20px] md:ml-0 flex-1 md:flex-none md:w-[28%] xl:w-[30%] flex flex-col justify-between">
+            <p className="text-[30px] vsm:text-[50px] font-normal font-Miracle uppercase">
+              0{index + 1}
+            </p>
+            <div className="">
+              <h1 className="mb-[10px] vsm:mb-[30px] text-[30px] vsm:text-4xl font-Miracle capitalize tracking-wide">
+                {facility.name}
+              </h1>
+              <p className="opacity-80 text-[13px] xl:text-lg leading-7">
+                {facility.desc}
+              </p>
+            </div>
+          </div>
+
+          <img
+            className="hidden md:block w-[35%] 2xl:w-fit"
+            src={facility.img}
+            alt="Hotel Facility"
+          />
+        </div>
       </div>
     </div>
   );

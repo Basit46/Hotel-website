@@ -10,8 +10,8 @@ const Gallery = () => {
     <section className="galllery-section w-full pt-[100px] xl:pt-[200px] pb-[100px]">
       <img className="mx-auto mb-[20px]" src={stamp} alt="stamp" />
 
-      <div className="text-center text-amber-300 text-[60px] vsm:text-[70px] md:text-[100px] 2xl:text-[125px] font-Miracle uppercase leading-[105px]">
-        our Gallery
+      <div className="text-center text-amber-300 text-[60px] vsm:text-[70px] md:text-[100px] 2xl:text-[125px] font-Miracle uppercase leading-[1.1]">
+        our <br className="sm:hidden" /> Gallery
       </div>
 
       <div className="w-full mt-[30px] xl:mt-[60px] flex justify-center md:justify-between">
@@ -20,7 +20,7 @@ const Gallery = () => {
           src={img1}
           alt="hotel"
         />
-        <div className="w-[80%] md:w-[36%] text-[13px] xl:text-base opacity-80 text-center leading-[1.2] xl:leading-7">
+        <div className="w-[90%] vsm:w-[80%] md:w-[36%] text-[13px] xl:text-base opacity-80 text-center leading-[1.2] xl:leading-7">
           Explore our spacious rooms with the gorgeous view to the historical
           part of the city. Each room has an exclusive interior design decorated
           with modern art pieces that will make your stay unforgettable.
@@ -34,9 +34,9 @@ const Gallery = () => {
           src={img3}
           alt="hotel"
         />
-        <div className="w-[45%] flex flex-col justify-start gap-[30px] xl:gap-[70px]">
+        <div className="w-full vsm:w-[45%] flex flex-col justify-start gap-[30px] xl:gap-[70px]">
           <img className="w-full h-fit" src={img4} alt="hotel" />
-          <div className="flex gap-[10px] xl:gap-[30px] items-center ">
+          <div className="flex gap-[10px] xl:gap-[30px] justify-center sm:justify-start items-center ">
             <svg
               className="w-[50px] h-[50px]"
               width="167"

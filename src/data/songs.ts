@@ -20,7 +20,7 @@ export const songs = [
     song: bnxn,
   },
   {
-    singer: "Peacocks Guiter Band",
+    singer: "Peacocks Band",
     title: "Eddie Quansa",
     song: peacocks,
   },

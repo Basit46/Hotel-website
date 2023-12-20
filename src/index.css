@@ -29,7 +29,7 @@ body {
   }
 
   .galllery-section h1 {
-    @apply font-Miracle text-[100px] hover:text-white duration-200 whitespace-nowrap;
+    @apply font-Miracle text-[40px]  sm:text-[80px] md:text-[100px] hover:text-white duration-200 whitespace-nowrap;
     color: rgba(255, 252, 246, 0.12);
   }
 

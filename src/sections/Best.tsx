@@ -4,7 +4,7 @@ import line from "../assets/lineVector.png";
 const Best = () => {
   return (
     <section className="relative w-full h-full">
-      <div className="h-[900px] sm:h-fit">
+      <div className="h-[700px] sm:h-fit">
         <img
           className="h-full w-full sm:h-fit sm:w-fit object-cover sm:object-contain"
           src={bg}
@@ -12,7 +12,7 @@ const Best = () => {
         />
       </div>
       <div className="absolute top-0 left-0 w-full h-full px-[20px] xl:px-[60px] pt-[30px] xl:pt-[100px] flex flex-col justify-between sm:block">
-        <div className="md:mb-[100px] text-yellow text-[55px] sm:text-[70px] xmd:text-[100px] xl:text-[125px] font-Miracle uppercase leading-[1] xl:leading-[105px]">
+        <div className="md:mb-[100px] font-bold md:font-normal text-yellow text-[55px] sm:text-[70px] xmd:text-[100px] xl:text-[125px] font-Miracle uppercase leading-[1] xl:leading-[105px]">
           Best
           <br />
           apartments

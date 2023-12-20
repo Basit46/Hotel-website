@@ -13,24 +13,24 @@ const Footer = ({ whiteBg }: FooterPropType) => {
     <footer
       className={`${
         whiteBg ? "bg-white text-green" : "bg-green text-white"
-      } relative w-full h-fit px-[20px] xl:px-[60px] pt-[200px]`}
+      } relative w-full h-fit px-[20px] xl:px-[60px] pt-[100px] sm:pt-[200px]`}
     >
       <p
         className={`${
           !whiteBg && "text-right"
-        } text-[38px] xl:text-[40px]  leading-[50px]`}
+        } text-[20px] vsm:text-[38px] xl:text-[40px]  leading-[50px]`}
       >
         +38 032 297 50 20
       </p>
       <p
         className={`${
-          whiteBg && "ml-auto mr-[110px] xl:mr-[200px]"
-        } mt-[80px] w-60 text-lg uppercase`}
+          whiteBg && "ml-auto w-fit vsm:mr-[110px] xl:mr-[200px]"
+        }  mt-[70px] vsm:mt-[80px] w-60 text-lg uppercase`}
       >
-        8 Lystopadovoho Chynu,Lviv
+        8 Lystopadovoho <br /> Chynu,Lviv
       </p>
 
-      <div className="relative mt-[150px] flex gap-[70px]">
+      <div className="relative mt-[70px] sm:mt-[150px] flex gap-[70px]">
         <div className="h-fit flex gap-[40px]">
           <h1 className="relative whitespace-nowrap z-[1] h-fit text-[84px] vsm:text-[100px] md:text-[150px] xl:text-[200px] font-Miracle uppercase leading-[200px]">
             Get in
@@ -42,7 +42,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
           />
         </div>
         <img
-          className="absolute top-[230px] right-[20px] md:static w-[233px] xl:w-fit"
+          className="absolute top-[210px] vsm:top-[230px] right-[20px] md:static w-[151px] vsm:w-[233px] xl:w-fit"
           src={hotelImg}
           alt="hotel room"
         />
@@ -75,7 +75,7 @@ const Footer = ({ whiteBg }: FooterPropType) => {
 
       <div
         id="contact"
-        className="py-[100px] border-t border-t-[#313F38] border-opacity-[0.24] flex gap-[50px] md:gap-0 flex-col md:flex-row justify-between"
+        className="mt-[100px] vsm:mt-0 py-[50px] pb-[100px] vsm:py-[100px] border-t border-t-[#313F38] border-opacity-[0.24] flex gap-[50px] md:gap-0 flex-col md:flex-row justify-between"
       >
         <div>
           <h1 className="text-[26px] uppercase">
