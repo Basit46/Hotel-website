@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import seyi from "../assets/musics/Seyi_Vibez_-_Different_Pattern.mp3";
 import { BsMusicPlayerFill } from "react-icons/bs";
 import {
   MdSkipPrevious,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../context/globalContext";
 
