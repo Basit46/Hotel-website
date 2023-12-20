@@ -1,7 +1,6 @@
 import Booking from "./components/Booking";
 import Navbar from "./sections/Navbar";
 import MusicPlayer from "./components/MusicPlayer";
-import { useGlobalContext } from "./context/globalContext";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Rooms from "./sections/Rooms";
