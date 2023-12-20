@@ -2,13 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import star from "../assets/star.svg";
+import { useGlobalContext } from "../context/globalContext";
 
-type MenuPropType = {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const MobileMenu = ({ isOpen, setIsOpen }: MenuPropType) => {
+const MobileMenu = () => {
+  const { isOpen, setIsOpen } = useGlobalContext();
   return (
     <div
       className={`mobile-menu ${
@@ -27,27 +24,53 @@ const MobileMenu = ({ isOpen, setIsOpen }: MenuPropType) => {
         </li>
 
         <li>
-          <ScrollLink to="about" duration={500} smooth={true}>
+          <ScrollLink
+            onClick={() => setIsOpen(false)}
+            to="about"
+            duration={500}
+            smooth={true}
+          >
             ABOUT
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink to="rooms" duration={500} smooth={true} offset={200}>
+          <ScrollLink
+            onClick={() => setIsOpen(false)}
+            to="rooms"
+            duration={500}
+            smooth={true}
+            offset={0}
+          >
             ROOMS
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink to="restaurant" duration={1000} smooth={true}>
+          <ScrollLink
+            onClick={() => setIsOpen(false)}
+            to="restaurant"
+            duration={1000}
+            smooth={true}
+          >
             RESTAURANT
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink to="conference-hall" duration={1000} smooth={true}>
+          <ScrollLink
+            onClick={() => setIsOpen(false)}
+            to="conference-hall"
+            duration={1000}
+            smooth={true}
+          >
             CONFERENCE HALL
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink to="contact" duration={1000} smooth={true}>
+          <ScrollLink
+            onClick={() => setIsOpen(false)}
+            to="contact"
+            duration={1000}
+            smooth={true}
+          >
             CONTACT
           </ScrollLink>
         </li>

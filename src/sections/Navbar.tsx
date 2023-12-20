@@ -2,10 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import MobileMenu from "../components/MobileMenu";
-import { useState } from "react";
+import { useGlobalContext } from "../context/globalContext";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useGlobalContext();
   return (
     <nav className="sticky top-0 z-[20] bg-green w-full px-[20px] xl:px-[60px] py-[18px] vsm:py-[30px] flex justify-between items-center">
       <Link to="/" className="text-xl font-medium">
@@ -58,7 +58,7 @@ const Navbar = () => {
         )}
       </button>
 
-      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <MobileMenu />
     </nav>
   );
 };
