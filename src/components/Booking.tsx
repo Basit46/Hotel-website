@@ -21,9 +21,7 @@ const Booking = () => {
       } fixed top-0 left-0 z-[21] w-full h-full bg-black/70 flex justify-center items-center`}
     >
       <div
-        className={`${
-          openBookingModal ? "opacity-100" : "opacity-0 translate-y-[40%]"
-        } relative duration-500 h-fit w-fit bg-white text-green px-[40px] py-[20px]`}
+        className={`relative duration-500 h-fit w-[90vw] vsm:w-fit bg-white text-green px-[20px] vsm:px-[40px] py-[20px]`}
       >
         <button
           className="absolute top-[20px] right-[20px]"

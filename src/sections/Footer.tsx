@@ -3,12 +3,14 @@ import hotelImg from "../assets/jean-philippe-delberghe-T5BF4OyQLwU-unsplash 1.p
 import curve from "../assets/Curve.png";
 import arrow1 from "../assets/footerarrow1.svg";
 import arrow2 from "../assets/footerarrow2.svg";
+import { useGlobalContext } from "../context/globalContext";
 
 type FooterPropType = {
   whiteBg: boolean;
 };
 
 const Footer = ({ whiteBg }: FooterPropType) => {
+  const { setOpenBookingModal } = useGlobalContext();
   return (
     <footer
       className={`${
@@ -58,16 +60,25 @@ const Footer = ({ whiteBg }: FooterPropType) => {
 
         <div className="flex">
           <div className="w-fit border border-[#313F38] flex py-[15px]">
-            <button className="px-[20px] py-[10px] flex items-center gap-[90px] border-r border-r-[#313F38] border-opacity-[0.24]">
+            <button
+              onClick={() => setOpenBookingModal(true)}
+              className="px-[20px] py-[10px] flex items-center gap-[90px] border-r border-r-[#313F38] border-opacity-[0.24]"
+            >
               <p className="text-base font-medium">CHECK IN</p>
               <img src={arrow1} alt="arrow" />
             </button>
-            <button className="px-[20px] py-[10px] flex items-center gap-[90px]">
+            <button
+              onClick={() => setOpenBookingModal(true)}
+              className="px-[20px] py-[10px] flex items-center gap-[90px]"
+            >
               <p className="text-base font-medium">CHECK OUT</p>
               <img src={arrow1} alt="arrow" />
             </button>
           </div>
-          <button className="py-[25px] bg-green text-white px-[25px] text-[18px] font-medium">
+          <button
+            onClick={() => setOpenBookingModal(true)}
+            className="py-[25px] bg-green text-white px-[25px] text-[18px] font-medium"
+          >
             BOOK ROOM
           </button>
         </div>

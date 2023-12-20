@@ -2,8 +2,11 @@ import { useState } from "react";
 import roomBtn from "../assets/roomBtn.svg";
 import starImg from "../assets/star.svg";
 import { rooms } from "../data/roomsList";
+import { useGlobalContext } from "../context/globalContext";
 
 const Rooms = () => {
+  const { setOpenBookingModal } = useGlobalContext();
+
   const [currentRoom, setCurrentRoom] = useState(0);
 
   const handleScroll = () => {
@@ -48,7 +51,10 @@ const Rooms = () => {
             </div>
           ))}
         </div>
-        <div className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px]">
+        <div
+          onClick={() => setOpenBookingModal(true)}
+          className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px] cursor-pointer"
+        >
           <div className="relative flex justify-center items-center">
             <svg
               className="btnBg w-[120px] h-[120px] xl:w-fit xl:h-fit"
@@ -176,7 +182,10 @@ const Rooms = () => {
               </div>
             ))}
           </div>
-          <div className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px]">
+          <div
+            onClick={() => setOpenBookingModal(true)}
+            className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px] cursor-pointer "
+          >
             <div className="relative flex justify-center items-center">
               <svg
                 className="btnBg w-[120px] h-[120px] xl:w-fit xl:h-fit"

@@ -47,11 +47,17 @@ const Hero = () => {
           </div>
 
           <div className="absolute bottom-[20px] xmd:bottom-0 xl:top-0 right-[20px] xmd:right-0 flex">
-            <div className="button blurbg flex gap-[90px] items-center justify-between">
+            <div
+              onClick={() => setOpenBookingModal(true)}
+              className="button blurbg flex gap-[90px] items-center justify-between"
+            >
               <p className="text-base font-medium leading-tight">CHECK IN</p>
               <img src={arrowDown} alt="arrow" />
             </div>
-            <div className="button blurbg flex gap-[90px] items-center justify-between">
+            <div
+              onClick={() => setOpenBookingModal(true)}
+              className="button blurbg flex gap-[90px] items-center justify-between"
+            >
               <p className="text-base font-medium leading-tight">CHECK OUT</p>
               <img src={arrowDown} alt="arrow" />
             </div>
@@ -63,7 +69,10 @@ const Hero = () => {
                 book room
               </p>
             </div>
-            <div className="relative flex xmd:hidden justify-center items-center">
+            <div
+              onClick={() => setOpenBookingModal(true)}
+              className="relative flex xmd:hidden justify-center items-center"
+            >
               <svg
                 className="btnBg w-[120px] h-[120px] xl:w-fit xl:h-fit fill-yellow"
                 width="167"
