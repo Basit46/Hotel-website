@@ -1,6 +1,7 @@
 import starImg from "../assets/star.svg";
 import heroBtn from "../assets/heroBtn.svg";
 import heroImg from "../assets/heroImage.png";
+import heroImg2 from "../assets/pexels-nath.jpg";
 import arrowDown from "../assets/arrow.svg";
 import { useGlobalContext } from "../context/globalContext";
 
@@ -40,8 +41,13 @@ const Hero = () => {
         <div className="relative">
           <div className="h-[472px] vsm:h-fit">
             <img
-              className="h-full w-full object-cover vsm:h-fit vsm:w-fit vsm:object-contain "
+              className="hidden sm:block h-full w-full object-cover vsm:h-fit vsm:w-fit vsm:object-contain "
               src={heroImg}
+              alt="Hero Main Image"
+            />
+            <img
+              className="block sm:hidden h-full w-full object-cover vsm:h-fit vsm:w-fit vsm:object-contain "
+              src={heroImg2}
               alt="Hero Main Image"
             />
           </div>

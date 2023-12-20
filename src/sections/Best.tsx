@@ -1,4 +1,5 @@
 import bg from "../assets/space-copenhagen-the-stratford-architonic-2-ed-reeve-24-arcit18 1.png";
+import bg2 from "../assets/pexels-max-rahubovskiy-7746042.jpg";
 import line from "../assets/lineVector.png";
 
 const Best = () => {
@@ -6,8 +7,13 @@ const Best = () => {
     <section className="relative w-full h-full">
       <div className="h-[700px] sm:h-fit">
         <img
-          className="h-full w-full sm:h-fit sm:w-fit object-cover sm:object-contain"
+          className="hidden sm:block h-full w-full sm:h-fit sm:w-fit object-cover sm:object-contain"
           src={bg}
+          alt="Apartment"
+        />
+        <img
+          className="block sm:hidden h-full w-full sm:h-fit sm:w-fit object-cover sm:object-contain"
+          src={bg2}
           alt="Apartment"
         />
       </div>

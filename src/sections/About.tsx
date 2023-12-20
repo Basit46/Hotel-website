@@ -19,8 +19,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="md:absolute pl-[20px] md:pl-0 z-[1] top-[120px] xl:top-[150px] left-[20%] xl:left-[35%]">
-        <h1 className="relative vsm:static w-fit md:w-full z-[1] vsm:z-0 text-right text-[60px] vsm:text-[100px] xl:text-[125px] font-Miracle leading-[1.2] text-yellow">
+      <div className="static vsm:absolute z-[20] pl-[20px] md:pl-0 top-[10px] sm:top-[120px] xl:top-[150px] left-[20%] xl:left-[35%]">
+        <h1 className="relative vsm:static w-fit md:w-full  vsm:z-0 text-right text-[60px] vsm:text-[100px] xl:text-[125px] font-Miracle leading-[1.2] text-yellow">
           ABOUT <br /> <span className="text-yellow md:text-[#fffcf6]">US</span>
         </h1>
       </div>

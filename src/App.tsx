@@ -11,13 +11,8 @@ import Gallery from "./sections/Gallery";
 import Footer from "./sections/Footer";
 
 const App = () => {
-  const { isOpen } = useGlobalContext();
   return (
-    <div
-      className={` ${
-        isOpen && "h-[100vh] overflow-hidden"
-      } max-w-[1400px] mx-auto`}
-    >
+    <div className="max-w-[1400px] mx-auto">
       <Navbar />
       <Hero />
       <About />

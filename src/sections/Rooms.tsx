@@ -116,7 +116,7 @@ const Rooms = () => {
 
           <img
             onClick={handleScroll}
-            className="w-[70px] vsm:w-[105px] xl:w-fit h-fit"
+            className="w-[70px] vsm:w-[105px] xl:w-fit h-fit cursor-pointer "
             src={roomBtn}
             alt="Room Button"
           />
