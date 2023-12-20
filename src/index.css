@@ -23,6 +23,9 @@ body {
   nav ul li a {
     @apply text-sm leading-tight cursor-pointer;
   }
+  .mobile-menu ul li a {
+    @apply text-[30px] uppercase leading-[0];
+  }
 
   .hero .button {
     @apply hidden w-[250px] h-fit xl:w-[300px] py-[30px] xmd:flex justify-center;

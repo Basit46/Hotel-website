@@ -33,7 +33,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="fixed bottom-[20px] left-[30px] bg-black w-fit h-[60px] flex items-center rounded-[10px] overflow-hidden">
+    <div className="fixed bottom-[20px] left-[10px] sm:left-[30px] bg-black w-fit h-[60px] flex items-center rounded-[10px] overflow-hidden">
       <div
         onClick={() => setIsOpen((prev) => !prev)}
         className="h-full w-[60px] bg-yellow flex justify-center items-center"

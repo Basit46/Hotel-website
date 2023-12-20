@@ -7,7 +7,7 @@ import { useGlobalContext } from "../context/globalContext";
 const Hero = () => {
   const { setOpenBookingModal } = useGlobalContext();
   return (
-    <section className="hero w-full mt-[40px] px-[20px] xl:px-[60px]">
+    <section className="hero w-full mt-[15px] vsm:mt-[40px] px-[20px] xl:px-[60px]">
       <div className="w-full flex flex-col xmd:flex-row items-center xl:items-start justify-between">
         <div className="mb-[24px] xmd:mb-0">
           <h1 className="text-[70px] vsm:text-[80px] md:text-[120px] text-center xmd:text-start xl:text-[140px] 2xl:text-[170px] font-Miracle leading-[1.2]">

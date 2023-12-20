@@ -1,8 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import MobileMenu from "../components/MobileMenu";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="sticky top-0 z-[20] bg-green w-full px-[20px] xl:px-[60px] py-[18px] vsm:py-[30px] flex justify-between items-center">
       <Link to="/" className="text-xl font-medium">
@@ -44,7 +47,18 @@ const Navbar = () => {
         +38 032 297 50 20
       </p>
 
-      <FaBars className="block xl:hidden" />
+      <button className="block xl:hidden">
+        {isOpen ? (
+          <FaTimes
+            className="text-[red] text-[30px]"
+            onClick={() => setIsOpen(false)}
+          />
+        ) : (
+          <FaBars className="text-[30px]" onClick={() => setIsOpen(true)} />
+        )}
+      </button>
+
+      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </nav>
   );
 };
