@@ -2,7 +2,6 @@ import { useState } from "react";
 import roomBtn from "../assets/roomBtn.svg";
 import starImg from "../assets/star.svg";
 import { rooms } from "../data/roomsList";
-import { Link } from "react-router-dom";
 
 const Rooms = () => {
   const [currentRoom, setCurrentRoom] = useState(0);
@@ -75,9 +74,8 @@ const Rooms = () => {
       </p>
       <h1 className="vsm:hidden text-4xl relative font-Miracle capitalize tracking-wide">
         {rooms.map((room, index) => (
-          <Link
+          <h1
             key={index}
-            to={`room/${room.id}`}
             className={`${
               currentRoom == index
                 ? "opacity-100 duration-500"
@@ -85,7 +83,7 @@ const Rooms = () => {
             } absolute text-left top-0 left-0`}
           >
             {room.name}
-          </Link>
+          </h1>
         ))}
       </h1>
 
@@ -126,9 +124,8 @@ const Rooms = () => {
           <div className="mt-[40px] xl:mt-[90px]">
             <h1 className="hidden md:block relative text-4xl font-Miracle capitalize tracking-wide">
               {rooms.map((room, index) => (
-                <Link
+                <h1
                   key={index}
-                  to={`room/${room.id}`}
                   className={`${
                     currentRoom == index
                       ? "opacity-100 duration-500 "
@@ -136,7 +133,7 @@ const Rooms = () => {
                   } absolute top-0 left-0`}
                 >
                   {room.name}
-                </Link>
+                </h1>
               ))}
             </h1>
             <div className="hidden md:block mt-[40px] h-[25px] xl:h-[40px] w-[30px]"></div>

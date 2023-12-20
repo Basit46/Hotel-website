@@ -1,11 +1,14 @@
 import Booking from "./components/Booking";
-import Facility from "./pages/Facility";
-import Home from "./pages/Home";
-import Room from "./pages/Room";
 import Navbar from "./sections/Navbar";
-import { Routes, Route } from "react-router-dom";
 import MusicPlayer from "./components/MusicPlayer";
 import { useGlobalContext } from "./context/globalContext";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Rooms from "./sections/Rooms";
+import Facilities from "./sections/Facilities";
+import Best from "./sections/Best";
+import Gallery from "./sections/Gallery";
+import Footer from "./sections/Footer";
 
 const App = () => {
   const { isOpen } = useGlobalContext();
@@ -16,11 +19,13 @@ const App = () => {
       } max-w-[1400px] mx-auto`}
     >
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/room/:roomId" element={<Room />} />
-        <Route path="/facility/:facilityId" element={<Facility />} />
-      </Routes>
+      <Hero />
+      <About />
+      <Rooms />
+      <Facilities />
+      <Best />
+      <Gallery />
+      <Footer whiteBg />
 
       {/* Modals */}
       <Booking />

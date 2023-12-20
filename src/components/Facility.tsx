@@ -2,7 +2,6 @@ import { useState } from "react";
 import arrow from "../assets/fArrow.svg";
 import roomBtn from "../assets/roomBtn.svg";
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
 
 type FacilityPropType = {
   facility: {
@@ -47,14 +46,13 @@ const Facility = ({ facility, index }: FacilityPropType) => {
           <span className="text-[24px] vsm:text-[40px]">{facility.name}</span>
         </ScrollLink>
 
-        <Link className="hidden md:block" to={`facility/${facility.id}`}>
+        <button onClick={() => setIsOpen(true)} className="hidden md:block">
           <img
-            onClick={() => setIsOpen(true)}
             className="w-[44px] xl:w-fit cursor-pointer"
             src={arrow}
             alt="arrow"
           />
-        </Link>
+        </button>
       </div>
 
       <div
