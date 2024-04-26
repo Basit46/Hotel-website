@@ -1,79 +1,61 @@
-import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import star from "../assets/star.svg";
 import { useGlobalContext } from "../context/globalContext";
 
 const MobileMenu = () => {
   const { isOpen, setIsOpen } = useGlobalContext();
   return (
     <div
-      className={`mobile-menu ${
+      className={`mobile-menu xl:hidden ${
         !isOpen && "hidden"
-      } fixed left-0 bg-green top-[10vh] vsm:top-[12vh] bottom-0 h-[100vh] w-[100vw] pt-[30px]`}
+      } fixed z-[999] left-0 bg-green top-[10vh] vsm:top-[12vh] bottom-0 min-h-[90vh] w-screen pt-[30px]`}
     >
-      <ul className="flex flex-col gap-[40px] px-[20px]">
-        <li
+      <div className="nav flex flex-1 flex-col gap-[40px] px-[20px]">
+        <ScrollLink
           onClick={() => setIsOpen(false)}
-          className="flex gap-[5px] items-center"
+          to="about"
+          duration={500}
+          smooth={true}
         >
-          <NavLink className="" to="/">
-            HOME
-          </NavLink>
-          <img className="h-[30px] w-fit mt-[-7px]" src={star} alt="star" />
-        </li>
+          ABOUT
+        </ScrollLink>
 
-        <li>
-          <ScrollLink
-            onClick={() => setIsOpen(false)}
-            to="about"
-            duration={500}
-            smooth={true}
-          >
-            ABOUT
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            onClick={() => setIsOpen(false)}
-            to="rooms"
-            duration={500}
-            smooth={true}
-            offset={0}
-          >
-            ROOMS
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            onClick={() => setIsOpen(false)}
-            to="restaurant"
-            duration={1000}
-            smooth={true}
-          >
-            RESTAURANT
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            onClick={() => setIsOpen(false)}
-            to="conference-hall"
-            duration={1000}
-            smooth={true}
-          >
-            CONFERENCE HALL
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            onClick={() => setIsOpen(false)}
-            to="contact"
-            duration={1000}
-            smooth={true}
-          >
-            CONTACT
-          </ScrollLink>
-        </li>
-      </ul>
+        <ScrollLink
+          onClick={() => setIsOpen(false)}
+          to="rooms"
+          duration={500}
+          smooth={true}
+          offset={0}
+        >
+          ROOMS
+        </ScrollLink>
+
+        <ScrollLink
+          onClick={() => setIsOpen(false)}
+          to="restaurant"
+          duration={1000}
+          smooth={true}
+        >
+          RESTAURANT
+        </ScrollLink>
+
+        <ScrollLink
+          onClick={() => setIsOpen(false)}
+          to="conference-hall"
+          duration={1000}
+          smooth={true}
+        >
+          CONFERENCE HALL
+        </ScrollLink>
+
+        <ScrollLink
+          onClick={() => setIsOpen(false)}
+          to="contact"
+          duration={1000}
+          smooth={true}
+        >
+          CONTACT
+        </ScrollLink>
+      </div>
 
       <p className="mt-[50px] mb-[20px] text-xl font-normal uppercase leading-tight text-center">
         +38 032 297 50 20

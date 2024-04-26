@@ -23,8 +23,8 @@ body {
   nav ul li a {
     @apply text-sm leading-tight cursor-pointer;
   }
-  .mobile-menu ul li a {
-    @apply text-[30px] uppercase leading-[0];
+  .mobile-menu .nav a {
+    @apply mb-[20px] text-[30px] bg-[red] uppercase leading-[0];
   }
 
   .hero .button {

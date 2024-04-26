@@ -68,12 +68,13 @@ const Facility = ({ facility, index }: FacilityPropType) => {
 
         <div className="flex justify-between">
           <div className="pt-[10px] md:pt-[30px] flex flex-col justify-start md:justify-end">
-            <img
-              onClick={() => setIsOpen(false)}
-              className="w-[70px] vsm:w-[105px] xl:w-fit h-fit rotate-[90deg] md:mb-[120px] cursor-pointer"
-              src={roomBtn}
-              alt="Room Button"
-            />
+            <button onClick={() => setIsOpen(false)}>
+              <img
+                className="w-[70px] vsm:w-[105px] xl:w-fit h-fit rotate-[90deg] md:mb-[120px] cursor-pointer"
+                src={roomBtn}
+                alt="Room Button"
+              />
+            </button>
           </div>
 
           <div className="pt-0 md:pt-[60px] ml-[20px] md:ml-0 flex-1 md:flex-none md:w-[28%] xl:w-[30%] flex flex-col justify-between">

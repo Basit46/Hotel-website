@@ -51,7 +51,7 @@ const Rooms = () => {
             </div>
           ))}
         </div>
-        <div
+        <button
           onClick={() => setOpenBookingModal(true)}
           className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px] cursor-pointer"
         >
@@ -73,7 +73,7 @@ const Rooms = () => {
               Book Room
             </p>
           </div>
-        </div>
+        </button>
       </div>
       <p className="md:hidden text-end mt-[30px] text-[22px]">
         0{currentRoom + 1} <span className="opacity-30">/ 04</span>
@@ -114,12 +114,13 @@ const Rooms = () => {
             ))}
           </div>
 
-          <img
-            onClick={handleScroll}
-            className="w-[70px] vsm:w-[105px] xl:w-fit h-fit cursor-pointer "
-            src={roomBtn}
-            alt="Room Button"
-          />
+          <button onClick={handleScroll}>
+            <img
+              className="w-[70px] vsm:w-[105px] xl:w-fit h-fit cursor-pointer "
+              src={roomBtn}
+              alt="Room Button"
+            />
+          </button>
         </div>
 
         <div className="md:pt-[30px] flex-1 md:flex-none md:w-[30%] flex flex-col justify-between">
@@ -182,7 +183,7 @@ const Rooms = () => {
               </div>
             ))}
           </div>
-          <div
+          <button
             onClick={() => setOpenBookingModal(true)}
             className="absolute bottom-[20px] xl:bottom-[50px] right-[20px] xl:right-[50px] cursor-pointer "
           >
@@ -204,7 +205,7 @@ const Rooms = () => {
                 Book Room
               </p>
             </div>
-          </div>
+          </button>
         </div>
       </div>
     </section>

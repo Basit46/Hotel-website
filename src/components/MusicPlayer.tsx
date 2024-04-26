@@ -33,22 +33,12 @@ const MusicPlayer = () => {
 
   return (
     <div className="fixed bottom-[20px] left-[10px] sm:left-[30px] bg-black w-fit h-[60px] flex items-center rounded-[10px] overflow-hidden">
-      <div
+      <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="h-full w-[60px] bg-yellow flex justify-center items-center"
       >
         <BsMusicPlayerFill className="text-[30px] text-green" />
-      </div>
-
-      <audio
-        className="hidden"
-        controls
-        src={songs[currentSong]?.song}
-        ref={audioRef}
-        onEnded={playNext}
-      >
-        Your browser does not support the audio element.
-      </audio>
+      </button>
 
       <div
         className={`${
@@ -72,6 +62,16 @@ const MusicPlayer = () => {
           <MdSkipNext onClick={playNext} />
         </div>
       </div>
+
+      <audio
+        className="hidden"
+        controls
+        src={songs[currentSong]?.song}
+        ref={audioRef}
+        onEnded={playNext}
+      >
+        Your browser does not support the audio element.
+      </audio>
     </div>
   );
 };

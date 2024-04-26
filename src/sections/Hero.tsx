@@ -53,29 +53,29 @@ const Hero = () => {
           </div>
 
           <div className="absolute bottom-[20px] xmd:bottom-0 xl:top-0 right-[20px] xmd:right-0 flex">
-            <div
+            <button
               onClick={() => setOpenBookingModal(true)}
               className="button blurbg flex gap-[90px] items-center justify-between"
             >
               <p className="text-base font-medium leading-tight">CHECK IN</p>
               <img src={arrowDown} alt="arrow" />
-            </div>
-            <div
+            </button>
+            <button
               onClick={() => setOpenBookingModal(true)}
               className="button blurbg flex gap-[90px] items-center justify-between"
             >
               <p className="text-base font-medium leading-tight">CHECK OUT</p>
               <img src={arrowDown} alt="arrow" />
-            </div>
-            <div
+            </button>
+            <button
               onClick={() => setOpenBookingModal(true)}
               className="button bg-yellow cursor-pointer"
             >
               <p className="text-black text-lg font-medium uppercase leading-tight">
                 book room
               </p>
-            </div>
-            <div
+            </button>
+            <button
               onClick={() => setOpenBookingModal(true)}
               className="relative flex xmd:hidden justify-center items-center"
             >
@@ -95,7 +95,7 @@ const Hero = () => {
               <p className="w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#1B3B36] text-center italic">
                 Book Room
               </p>
-            </div>
+            </button>
           </div>
         </div>
 
